@@ -22,3 +22,9 @@
 [submodule "snipmate.vim"]
 	path = snipmate.vim
 	url = git://github.com/msanders/snipmate.vim.git
+[submodule "nerdcommenter"]
+	path = nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "git-vim"]
+	path = git-vim
+	url = git://github.com/motemen/git-vim.git

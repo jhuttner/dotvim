@@ -13,3 +13,9 @@
 [submodule "autoload"]
 	path = autoload
 	url = git://github.com/tpope/vim-pathogen.git
+[submodule "gist-vim"]
+	path = gist-vim
+	url = git://github.com/mattn/gist-vim.git
+[submodule "vim-yankring"]
+	path = vim-yankring
+	url = git://github.com/chrismetcalf/vim-yankring.git

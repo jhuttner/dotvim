@@ -19,3 +19,6 @@
 [submodule "vim-yankring"]
 	path = vim-yankring
 	url = git://github.com/chrismetcalf/vim-yankring.git
+[submodule "snipmate.vim"]
+	path = snipmate.vim
+	url = git://github.com/msanders/snipmate.vim.git

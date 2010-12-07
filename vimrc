@@ -29,7 +29,7 @@ set backspace=indent,eol,start
 set laststatus=2
 set relativenumber
 set undofile
-" old stuff
+" old
 set shiftwidth=2
 set tabstop=2 
 set noexpandtab
@@ -67,14 +67,23 @@ nnoremap <leader>m <C-w>\|
 nnoremap <leader>z <C-w>=
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 nnoremap <leader>l :source ~/.vimrc<CR>
+
+"Yank Ring Plugin
+nnoremap <silent> <F4> :YRShow<CR> 
+let g:yankring_window_height = 20
+
 "Gundo
 nnoremap <F5> :GundoToggle<CR>
+
 "NERDTree
 nnoremap <F6> :NERDTreeToggle<CR>
+
 "Open a vertically-split window, and focus on it.
 nnoremap <leader>v <C-w>v<C-w>l
+
 "Carriage Return to toggle between files in window
 nnoremap <CR> <C-^>
+
 
 "Easier splits navigation - Remapped Caps Lock to Control
 nnoremap <C-h> <C-w>h

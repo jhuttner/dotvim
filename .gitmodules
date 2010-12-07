@@ -28,3 +28,6 @@
 [submodule "git-vim"]
 	path = git-vim
 	url = git://github.com/motemen/git-vim.git
+[submodule "vim-autoclose"]
+	path = vim-autoclose
+	url = git://github.com/Townk/vim-autoclose.git

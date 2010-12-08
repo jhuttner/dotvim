@@ -29,6 +29,8 @@ set backspace=indent,eol,start
 set laststatus=2
 set relativenumber
 set undofile
+set t_Co=256  
+
 " old
 set shiftwidth=2
 set tabstop=2 
@@ -41,6 +43,7 @@ set bs=2
 set hls
 set bg=dark
 set nowrap
+set pastetoggle=<F2>
 set backupdir=$HOME/vi-backup
 set wildignore=*Zend*,.git,*bundles*,*jpgraph*,*Smarty*,*smarty*,django_test*,backups/2010*,images*,graphs*,*amcharts*,.csv
 set foldmethod=marker
@@ -84,6 +87,11 @@ nnoremap <leader>v <C-w>v<C-w>l
 "Carriage Return to toggle between files in window
 nnoremap <CR> <C-^>
 
+"Make every command easier!
+nnoremap ; :
+
+"sudo vim <file> if vim <file> complains about permissions
+cmap w!! w !sudo tee % >/dev/null
 
 "Easier splits navigation - Remapped Caps Lock to Control
 nnoremap <C-h> <C-w>h

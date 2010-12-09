@@ -93,6 +93,9 @@ nnoremap ; :
 "sudo vim <file> if vim <file> complains about permissions
 cmap w!! w !sudo tee % >/dev/null
 
+"make :ww be a regular save
+cmap ww w<CR>
+
 "Easier splits navigation - Remapped Caps Lock to Control
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j

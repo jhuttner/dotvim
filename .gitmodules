@@ -31,3 +31,6 @@
 [submodule "vim-autoclose"]
 	path = vim-autoclose
 	url = git://github.com/Townk/vim-autoclose.git
+[submodule "vim-matchit"]
+	path = vim-matchit
+	url = git://github.com/edsono/vim-matchit.git

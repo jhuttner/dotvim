@@ -34,3 +34,9 @@
 [submodule "vim-matchit"]
 	path = vim-matchit
 	url = git://github.com/edsono/vim-matchit.git
+[submodule "supertab"]
+	path = supertab
+	url = git://github.com/ervandew/supertab.git
+[submodule "vim-repeat"]
+	path = vim-repeat
+	url = git://github.com/tpope/vim-repeat.git

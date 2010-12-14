@@ -61,14 +61,14 @@ let mapleader = ","
 "*******************************************
 "*******************************************
 
-nnoremap <leader>ctf :CommandTFlush<cr>
+nnoremap <leader>ctf :CommandTFlush<CR>
 nnoremap <leader>s /<C-p>
-nnoremap <leader>g <C-g>
-nnoremap <leader>w :w<cr>
+nnoremap <leader>gg <C-g>
+nnoremap <leader>w :w<CR>
 nnoremap <leader>m <C-w>\|
-"nnoremap <leader>q :q<cr>
+"nnoremap <leader>q :q<CR>
 nnoremap <leader>z <C-w>=
-nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<CR>
 nnoremap <leader>l :source ~/.vimrc<CR>
 
 "Yank Ring Plugin
@@ -85,16 +85,20 @@ nnoremap <F6> :NERDTreeToggle<CR>
 nnoremap <leader>v <C-w>v<C-w>l
 
 "Carriage Return to toggle between files in window
-nnoremap <CR> <C-^>
+nnoremap <CR> :wa<CR><C-^>
 
 "Make every command easier!
 nnoremap ; :
 
 "sudo vim <file> if vim <file> complains about permissions
-cmap w!! w !sudo tee % >/dev/null
+cnoremap w!! w !sudo tee % >/dev/null
 
 "make :ww be a regular save
-cmap ww w<CR>
+cnoremap ww w<CR>
+
+"support for sessions.  quick and easy.
+"cnoremap sesh mksession! ~/.vim_session
+"cnoremap lsesh source ~/.vim_session
 
 "Easier splits navigation - Remapped Caps Lock to Control
 nnoremap <C-h> <C-w>h
@@ -111,7 +115,7 @@ set gdefault
 set incsearch
 set showmatch
 set hlsearch
-nnoremap <leader><space> :noh<cr>
+nnoremap <leader><space> :noh<CR>
 nnoremap <tab> %
 vnoremap <tab> %
 

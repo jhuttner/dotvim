@@ -12,6 +12,9 @@ augroup filetype
 	au! BufRead,BufNewFile *.tpl set ft=html " For SnipMate
 augroup END
 
+"File type for autoclose tag to work on phtml files
+au FileType xhtml,phtml,xml ru ftplugin/html/autoclosetag.vim
+
 " new stuff - http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 set encoding=utf-8
 set scrolloff=3
@@ -19,6 +22,8 @@ set autoindent
 set showmode
 set showcmd
 set hidden
+" automatically write a file when leaving a modified buffer"
+set autowrite 
 set wildmenu
 set wildmode=list:longest
 set visualbell
@@ -47,6 +52,8 @@ set pastetoggle=<F2>
 set backupdir=$HOME/vi-backup
 set wildignore=*Zend*,.git,*bundles*,*jpgraph*,*Smarty*,*smarty*,django_test*,backups/2010*,images*,graphs*,*amcharts*,.csv
 set foldmethod=marker
+"set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+"set statusline+=%{fugitive#statusline()}
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 set statusline+=%{fugitive#statusline()}
 
@@ -61,12 +68,13 @@ let mapleader = ","
 "*******************************************
 "*******************************************
 
-nnoremap <leader>ctf :CommandTFlush<CR>
 nnoremap <leader>s /<C-p>
 nnoremap <leader>gg <C-g>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>m <C-w>\|
 "nnoremap <leader>q :q<CR>
+nnoremap <leader>k :nohlsearch<CR>
+nnoremap <leader>f :CommandTFlush<CR>
 nnoremap <leader>z <C-w>=
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<CR>
 nnoremap <leader>l :source ~/.vimrc<CR>
@@ -128,4 +136,4 @@ inoremap jj <ESC>
 
 " colorscheme
 syntax enable
-colorscheme ron
+colorscheme darkblue

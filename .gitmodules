@@ -46,3 +46,9 @@
 [submodule "delimitMate"]
 	path = delimitMate
 	url = git://github.com/Raimondi/delimitMate.git
+[submodule "bundle/php-xdebug-git"]
+	path = bundle/php-xdebug-git
+	url = git://github.com/travisj/php-xdebug-vim.git
+[submodule "vim-visual-star-search"]
+	path = vim-visual-star-search
+	url = git://github.com/bronson/vim-visual-star-search.git

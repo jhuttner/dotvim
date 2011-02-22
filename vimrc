@@ -74,6 +74,7 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>m <C-w>\|
 "nnoremap <leader>q :q<CR>
 nnoremap <leader>k :nohlsearch<CR>
+nnoremap <leader>n :cn<CR>
 nnoremap <leader>f :CommandTFlush<CR>
 nnoremap <leader>z <C-w>=
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<CR>
@@ -84,7 +85,7 @@ nnoremap <silent> <F4> :YRShow<CR>
 let g:yankring_window_height = 20
 
 "Gundo
-nnoremap <F5> :GundoToggle<CR>
+"nnoremap <F5> :GundoToggle<CR>
 
 "NERDTree
 nnoremap <F6> :NERDTreeToggle<CR>
@@ -97,6 +98,9 @@ nnoremap <CR> :wa<CR><C-^>
 
 "Make every command easier!
 nnoremap ; :
+
+"Select text after paste
+nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]''`]`'
 
 "sudo vim <file> if vim <file> complains about permissions
 cnoremap w!! w !sudo tee % >/dev/null

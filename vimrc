@@ -100,7 +100,7 @@ nnoremap <CR> :wa<CR><C-^>
 nnoremap ; :
 
 "Select text after paste
-nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]''`]`'
+nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 
 "sudo vim <file> if vim <file> complains about permissions
 cnoremap w!! w !sudo tee % >/dev/null

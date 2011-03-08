@@ -52,3 +52,9 @@
 [submodule "vim-visual-star-search"]
 	path = vim-visual-star-search
 	url = git://github.com/bronson/vim-visual-star-search.git
+[submodule "vim-pastie"]
+	path = vim-pastie
+	url = git://github.com/tpope/vim-pastie.git
+[submodule "supertab"]
+	path = supertab
+	url = git://github.com/ervandew/supertab.git

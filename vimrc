@@ -15,6 +15,12 @@ augroup END
 "File type for autoclose tag to work on phtml files
 au FileType xhtml,phtml,xml ru ftplugin/html/autoclosetag.vim
 
+" from tpope
+set cmdheight=2
+set complete-=i     " Searching includes can be slow
+set dictionary+=/usr/share/dict/words
+set display=lastline
+
 " new stuff - http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 set encoding=utf-8
 set scrolloff=3

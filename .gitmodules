@@ -58,3 +58,9 @@
 [submodule "supertab"]
 	path = supertab
 	url = git://github.com/ervandew/supertab.git
+[submodule "vim-extradite"]
+	path = vim-extradite
+	url = https://github.com/int3/vim-extradite.git
+[submodule "bundle/pbcopy"]
+	path = bundle/pbcopy
+	url = git@github.com:jhuttner/pbcopy.vim.git

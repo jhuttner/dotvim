@@ -43,23 +43,23 @@
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = git://github.com/edsono/vim-matchit.git
-[submodule "delimitMate"]
-	path = delimitMate
+[submodule "bundle/delimitMate"]
+	path = bundle/delimitMate
 	url = git://github.com/Raimondi/delimitMate.git
 [submodule "bundle/php-xdebug-git"]
 	path = bundle/php-xdebug-git
 	url = git://github.com/travisj/php-xdebug-vim.git
-[submodule "vim-visual-star-search"]
-	path = vim-visual-star-search
+[submodule "bundle/vim-visual-star-search"]
+	path = bundle/vim-visual-star-search
 	url = git://github.com/bronson/vim-visual-star-search.git
-[submodule "vim-pastie"]
-	path = vim-pastie
+[submodule "bundle/vim-pastie"]
+	path = bundle/vim-pastie
 	url = git://github.com/tpope/vim-pastie.git
-[submodule "supertab"]
-	path = supertab
+[submodule "bundle/supertab"]
+	path = bundle/supertab
 	url = git://github.com/ervandew/supertab.git
-[submodule "vim-extradite"]
-	path = vim-extradite
+[submodule "bundle/vim-extradite"]
+	path = bundle/vim-extradite
 	url = https://github.com/int3/vim-extradite.git
 [submodule "bundle/pbcopy"]
 	path = bundle/pbcopy

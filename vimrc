@@ -74,6 +74,7 @@ let mapleader = ","
 "*******************************************
 "*******************************************
 
+noremap <leader>y y :PBCopy<CR>
 nnoremap <leader>s /<C-p>
 nnoremap <leader>gg <C-g>
 nnoremap <leader>w :w<CR>

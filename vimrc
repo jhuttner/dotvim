@@ -15,6 +15,7 @@ augroup END
 "File type for autoclose tag to work on phtml files
 au FileType xhtml,phtml,xml ru ftplugin/html/autoclosetag.vim
 
+
 " from tpope
 set cmdheight=2
 set complete-=i     " Searching includes can be slow
@@ -162,3 +163,7 @@ inoremap ii <Esc>
 " colorscheme
 syntax enable
 colorscheme darkblue
+
+autocmd FileType python set tabstop=2 shiftwidth=2 expandtab
+autocmd FileType md set tabstop=2 shiftwidth=2 expandtab
+autocmd FileType markdown set tabstop=2 shiftwidth=2 expandtab

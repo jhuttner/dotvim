@@ -10,11 +10,15 @@ augroup filetype
 	au!
 	au! BufRead,BufNewFile *.phtml set ft=php.html " For SnipMate
 	au! BufRead,BufNewFile *.tpl set ft=html " For SnipMate
+	au BufNewFile,BufRead .tmux.conf*,tmux.conf*,tmux.* setf tmux
 augroup END
+
+au FileType python set tabstop=2 shiftwidth=2 expandtab
+au FileType md set tabstop=2 shiftwidth=2 expandtab
+au FileType markdown set tabstop=2 shiftwidth=2 expandtab
 
 "File type for autoclose tag to work on phtml files
 au FileType xhtml,phtml,xml ru ftplugin/html/autoclosetag.vim
-
 
 " from tpope
 set cmdheight=2
@@ -86,7 +90,11 @@ nnoremap <leader>n :cn<CR>
 nnoremap <leader>f :CommandTFlush<CR>
 nnoremap <leader>z <C-w>=
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<CR>
+nnoremap <leader>ed :! mkdiff<CR>
+nnoremap <leader>et :e /tmp/gitdiff<CR>
 nnoremap <leader>l :source ~/.vimrc<CR>
+noremap <leader>b :w !php -l<CR>
+
 
 "Yank Ring Plugin
 nnoremap <silent> <F4> :YRShow<CR>
@@ -129,6 +137,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-t> <C-w>t
+inoremap <C-t> <ESC>
 
 "searching
 nnoremap / /\v
@@ -158,12 +167,8 @@ nnoremap r  <C-Y>
 "*******************************************
 "*******************************************
 inoremap jj <ESC>
-inoremap ii <Esc>
 
 " colorscheme
 syntax enable
 colorscheme darkblue
 
-autocmd FileType python set tabstop=2 shiftwidth=2 expandtab
-autocmd FileType md set tabstop=2 shiftwidth=2 expandtab
-autocmd FileType markdown set tabstop=2 shiftwidth=2 expandtab

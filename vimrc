@@ -6,6 +6,15 @@ filetype plugin indent on
 set nocompatible
 set modelines=0
 
+function! Change_dir ()
+	let path = expand('%:p:h')
+	let adnxs_dir = system('dirgetter.sh ' . path)
+	if adnxs_dir != ''
+		execute  'lcd ' . adnxs_dir
+	endif
+endfunction
+au! BufEnter * call Change_dir()
+
 augroup filetype
 	au!
 	au! BufRead,BufNewFile *.phtml set ft=php.html " For SnipMate
@@ -61,7 +70,7 @@ set bg=dark
 set nowrap
 set pastetoggle=<F2>
 set backupdir=$HOME/vi-backup
-set wildignore=*Zend*,.git,*bundles*,*jpgraph*,*Smarty*,*smarty*,django_test*,backups/2010*,images*,graphs*,*amcharts*,.csv
+set wildignore=*Zend*,.git,*bundles*,*jpgraph*,*Smarty*,*smarty*,django_test*,backups/2010*,images*,graphs*,*amcharts*,.csv,*un~*,*swp*,library/adodb*,current/*
 set foldmethod=marker
 "set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 "set statusline+=%{fugitive#statusline()}
@@ -83,7 +92,7 @@ noremap <leader>y y :PBCopy<CR>
 nnoremap <leader>s /<C-p>
 nnoremap <leader>gg <C-g>
 nnoremap <leader>w :w<CR>
-nnoremap <leader>m <C-w>\|
+nnoremap <leader>m 0<C-w>\|
 "nnoremap <leader>q :q<CR>
 nnoremap <leader>k :nohlsearch<CR>
 nnoremap <leader>n :cn<CR>
@@ -93,7 +102,8 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<CR>
 nnoremap <leader>ed :! mkdiff<CR>
 nnoremap <leader>et :e /tmp/gitdiff<CR>
 nnoremap <leader>l :source ~/.vimrc<CR>
-noremap <leader>b :w !php -l<CR>
+nnoremap <leader>b :w !php -l<CR>
+nnoremap <F2> :w<CR>:make<CR>:cw<CR>
 
 
 "Yank Ring Plugin
@@ -137,6 +147,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-t> <C-w>t
+"nnoremap <C-v> "ayaw :%s/\=@a/\=@a/gn
 inoremap <C-t> <ESC>
 
 "searching
@@ -172,3 +183,5 @@ inoremap jj <ESC>
 syntax enable
 colorscheme darkblue
 
+" put swp files in /tmp/swp
+set directory=/tmp/swp

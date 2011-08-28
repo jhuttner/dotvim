@@ -34,6 +34,7 @@ set cmdheight=2
 set complete-=i     " Searching includes can be slow
 set dictionary+=/usr/share/dict/words
 set display=lastline
+set nofoldenable
 
 " new stuff - http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 set encoding=utf-8
@@ -103,7 +104,7 @@ nnoremap <leader>ed :! mkdiff<CR>
 nnoremap <leader>et :e /tmp/gitdiff<CR>
 nnoremap <leader>l :source ~/.vimrc<CR>
 nnoremap <leader>b :w !php -l<CR>
-nnoremap <F2> :w<CR>:make<CR>:cw<CR>
+nnoremap <F2> :JSHint<CR>:clast<CR>
 
 
 "Yank Ring Plugin
